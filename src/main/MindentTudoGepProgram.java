@@ -13,6 +13,10 @@ public class MindentTudoGepProgram {
         for (int szam : szamok) {
             System.out.println(szam);
         }
+        
+        //System.out.println("új sorsolás után:");
+        //gep.sorsol();
+        //System.out.println(gep.getNyeroSzamokStr());
     }
     
 }

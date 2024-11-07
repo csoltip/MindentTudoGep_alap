@@ -31,12 +31,23 @@ public class Gep {
     }
     
     public String getNyeroSzamokStr(){
-        return "1,2,3,4,5";
+        String s = Arrays.toString(getNyeroSzamok());
+        /* s tartalma: "[1,2,3,4,5]" */
+        /* megoldás String műveltekkel: */
+        //s = s.substring(1, s.length()-1);
+        //s = s.substring(s.indexOf("[")+1, s.lastIndexOf("]"));
+        s = s.substring(1, s.lastIndexOf("]"));
+        return s;
     }
     
     public int[] getNyeroSzamok(){
-        return new int[]{1,2,3,4,5};
+        int[] szamok = new int[5];
+        int db = 0;
+        for (int i = 1; i < lottoszamok.length; i++) {
+            if(lottoszamok[i]){
+                szamok[db++] = i;
+            }
+        }
+        return szamok;
     }
-
-    
 }
